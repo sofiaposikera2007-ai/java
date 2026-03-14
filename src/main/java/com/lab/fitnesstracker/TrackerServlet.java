@@ -14,9 +14,10 @@ package com.lab.fitnesstracker;
 
         Tracker tracker = new Tracker("WHOOP 5.0","whoop.jpg","Фітнес-браслет WHOOP 5.0 with Obsidian SuperKnit Band Peak Membership Чорний",12900,"пластик");
 
+        //Перетворюємо об'єкт у JSON
         Gson gson = new Gson();
         String json = gson.toJson(tracker);
-
+         //Відправка відповіді
         resp.setContentType("application/json");
         resp.getWriter().write(json);
     }
